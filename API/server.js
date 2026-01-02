@@ -13,16 +13,20 @@ app.use(cors({
   methods:["GET","POST","PUT","DELETE"],
   credentials:true
 }))
-const port = 2000;
+const port = 5000;
 app.listen(port, () => console.log(`server is runing on port ${port}`));
 
-mongoose
-  .connect(
-    "mongodb+srv://Testuser1221:%40Testuser1221@cluster0.a0ed4f4.mongodb.net/",
-    { dbName: "Add_contact" }
-  )
-  .then(() => console.log("Mongodb is connected...."))
-  .catch((err) => console.log(err));
+mongoose.connect(process.env.MONGO_URI)
+  .then(() => console.log("MongoDB Connected"))
+  .catch(err => console.log(err));
+
+// mongoose
+//   .connect(
+//     "mongodb+srv://Testuser1221:%40Testuser1221@cluster0.a0ed4f4.mongodb.net/",
+//     { dbName: "Add_contact" }
+//   )
+//   .then(() => console.log("Mongodb is connected...."))
+//   .catch((err) => console.log(err));
 
 // get all contact
 
