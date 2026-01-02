@@ -10,7 +10,7 @@ function App() {
   const [opacity, setOpacity] = useState(false);
   const [id, setId] = useState("");
 
-  const url = "http://localhost:2000";
+  const url = "https://add-contact.onrender.com"||"http://localhost:5000";
   
 
   useEffect(() => {

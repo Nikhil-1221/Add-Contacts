@@ -158,8 +158,7 @@ const AddContact = ({ handlModal, showModal, url, id, setId, contacts }) => {
                       <button
                         type="button"
                         className="btn btn-danger "
-                        onClick={handlModal}
-                        // onClick={()=>{handlModal(),resetModel()}}
+                        onClick={()=>{handlModal(),resetModel()}}
                       >
                         Cancle
                       </button>

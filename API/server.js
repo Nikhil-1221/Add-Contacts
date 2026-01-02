@@ -16,7 +16,7 @@ app.use(cors({
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`server is runing on port ${PORT}`));
 
-mongoose.connect(process.env.MONGO_URI)
+mongoose.connect(process.env.MONGO_URI||"mongodb+srv://Testuser1221:%40Testuser1221@cluster0.a0ed4f4.mongodb.net/",{ dbName: "Add_contact" })
   .then(() => console.log("MongoDB Connected"))
   .catch(err => console.log(err));
 
