@@ -70,15 +70,15 @@ const Contact = ({ contacts, opacity, url, setId, handlModal }) => {
             >
               <button
                 className="btn btn-primary"
-                onClick={() => {
-                  setId(data._id), handlModal();
-                }}
+                // onClick={() => {
+                //   setId(data._id), handlModal();
+                // }}
               >
                 Edit
               </button>
               <button
                 className="btn btn-danger"
-                onClick={() => deleteContact(data._id)}
+                // onClick={() => deleteContact(data._id)}
               >
                 Delete
               </button>
